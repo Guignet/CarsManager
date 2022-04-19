@@ -1,0 +1,113 @@
+
+
+<div class="card " >
+
+
+  <ngb-carousel  >
+    <ng-template ngbSlide *ngFor="let img of car.pictures">
+      <div class="picsum-img-wrapper" style="height: 500px">
+        <img [src]="img" alt="Random first slide" class="rounded img-fluid img-thumbnail " height="100">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+
+
+  <div class="card-body">
+
+    <h5 class="card-title">
+      <span *ngIf="car.title; else na">
+        {{car.title}}
+      </span>
+    </h5>
+
+    <h5 class="card-title">
+      <span *ngIf="car.id; else na">
+        #{{car.id}}
+      </span>
+    </h5>
+
+
+
+    <p class="card-text">Marque :
+      <span *ngIf="car.brand; else na">
+        {{car.brand}}
+      </span>
+    </p>
+
+    <p class="card-text">Modèle :
+      <span *ngIf="car.model; else na">
+        {{car.model}}
+      </span>
+    </p>
+
+    <p class="card-text">Année du modèle :
+      <span *ngIf="car.model_year; else na">
+        {{car.model_year}}
+      </span>
+    </p>
+
+    <p class="card-text">Mise en circulation :
+      <span *ngIf="car.issuance; else na">
+        {{car.issuance}}
+      </span>
+    </p>
+
+    <p class="card-text">Kilométrage:
+      <span *ngIf="car.mileage; else na">
+        {{car.mileage | currency: 'Km':'symbol':'1.0-2'}}
+      </span>
+    </p>
+
+    <p class="card-text">Carburant :
+      <span *ngIf="car.fuel; else na">
+        {{car.fuel}}
+      </span>
+    </p>
+
+    <p class="card-text">Couleur :
+      <span *ngIf="car.color; else na">
+        {{car.color}}
+      </span>
+    </p>
+
+    <p class="card-text">Nombre de portes :
+      <span *ngIf="car.numbers_doors; else na">
+        {{car.numbers_doors}}
+      </span>
+    </p>
+
+    <p class="card-text">Puissance DIN :
+      <span *ngIf="car.horse_power; else na">
+        {{car.horse_power | currency: 'Ch':'symbol':'1.0-2'}}
+      </span>
+    </p>
+
+    <h5 class="card-title">Prix :
+      <span *ngIf="car.price; else na">
+        {{car.price | currency: '€':'symbol':'1.0-2'}}
+      </span>
+    </h5>
+
+
+
+    <p class="card-text">Vendue :
+      <span *ngIf="car.sold; else na">
+        {{car.sold}}
+      </span>
+    </p>
+
+    <p class="card-text">Address :
+      <span *ngIf="car.address; else na">
+        {{car.address}}
+      </span>
+    </p>
+
+
+    <a href="#" class="btn btn-primary" (click)="selectCar()">Selectionner</a>
+    <p class="btn btn-primary" (click)="goBack()">go back</p>
+  </div>
+
+</div>
+
+<ng-template #na>Non renseigné</ng-template>

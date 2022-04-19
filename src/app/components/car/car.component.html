@@ -1,0 +1,22 @@
+<div class="card col-12 ">
+
+    <ngb-carousel  >
+      <ng-template ngbSlide *ngFor="let img of car.pictures">
+        <div class="picsum-img-wrapper" style="height: 500px">
+          <img [src]="img" alt="Random first slide" class="rounded img-fluid img-thumbnail " height="100">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+  <div class="card-body">
+    <h5 class="card-title">{{car.title}}</h5>
+    <p class="card-text">{{car.address}}</p>
+    <p class="card-text">{{car.brand}}</p>
+    <p class="card-text">{{car.model}}</p>
+    <p class="card-text">{{car.model_year}}</p>
+    <p class="card-text">{{car.issuance}}</p>
+    <p class="card-text">{{car.price}}</p>
+    <a href="/detail/{{car.id}}" class="btn btn-primary" (click)="sendInfo()">Details</a>
+    <a href="/cars" class="btn btn-primary" (click)="delete()">Delete</a>
+  </div>
+</div>

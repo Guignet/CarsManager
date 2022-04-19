@@ -1,0 +1,95 @@
+
+<div class="card col" style="width: 18rem;">
+
+  <div class="card-body">
+    <form method="post" [formGroup]="createCarForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="carTitle">Titre de l'annonce</label>
+        <input name="title" formControlName="title" type="text" class="form-control" id="carTitle" aria-describedby="Entrez le titre de l'annonce" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carAddress">Adresse de l'annonce</label>
+        <input name="address" formControlName="address" type="text" class="form-control" id="carAddress" aria-describedby="Entrez l'adresse de l'annonce" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carBrand">Marque</label>
+        <input  name="brand" formControlName="brand" type="text" class="form-control" id="carBrand" aria-describedby="Entrez la marque de la voiture" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carModel">Modèle</label>
+        <input  name="model" formControlName="model" type="text" class="form-control" id="carModel" aria-describedby="Entrez le modèle de la voiture" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carModelYear">Année du modèle</label>
+        <input  name="modelYear" formControlName="model_year" type="number" class="form-control" id="carModelYear" aria-describedby="Entrez l'année du modèle de la voiture" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carIssuance">Date de la mise en circulation</label>
+        <input  name="issuance" formControlName="issuance" type="text" class="form-control" id="carIssuance" aria-describedby="Entrez la date de mise en circulation du véhicule dans le format : 'jj/MM/YYYY' " placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carMileage">Kilométrage</label>
+        <input  name="mileage" formControlName="mileage" type="number" class="form-control" id="carMileage" aria-describedby="Entrez le kilométrage du véhicule" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carFuel">Type de carburant</label>
+        <input  name="fuel" formControlName="fuel" type="text" class="form-control" id="carFuel" aria-describedby="Entrez le type de carburant utilisé par le véhicule" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carColor">Couleur</label>
+        <input  name="color" formControlName="color" type="text" class="form-control" id="carColor" aria-describedby="Entrez la couleur du véhicule" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carNumbersDoors">Nombre de portes</label>
+        <input  name="numbersDoors" formControlName="numbers_doors" type="text" class="form-control" id="carNumbersDoors" aria-describedby="Entrez le nombre de porte du véhicule" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carHorsePower">Puissante (en chevaux)</label>
+        <input  name="horsePower" formControlName="horse_power" type="number" class="form-control" id="carHorsePower" aria-describedby="Entrez le nombre de chevaux du véhicule" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="carPrice">Prix</label>
+        <input  name="price" formControlName="price" type="number" class="form-control" id="carPrice" aria-describedby="Entrez le prix du véhicule à vendre" placeholder="">
+      </div>
+
+
+      <div class="form-group">
+        <label for="carPictures">Images</label>
+        <input name="pictures" formControlName="pictures" type="text" class="form-control" id="carPictures" aria-describedby="Importer une image du véhicule à vendre" placeholder="">
+      </div>
+
+
+      <div class="form-group">
+        <label for="carSold">Le véhicule est-il à vendre ?</label>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="carSold" value="false" checked>
+          <label class="form-check-label" for="carSold">A vendre</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="carSold2" value="true">
+          <label class="form-check-label" for="carSold2">Vendue</label>
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary" type="submit">Ajouter un véhicule</button>
+
+    </form>
+
+  </div>
+
+</div>

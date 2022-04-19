@@ -1,0 +1,6 @@
+<p>{{carInfo?'Vous avez selectionné '+carInfo.title:''}}</p>
+<div class="row" tilelist>
+  <div class="col-lg-5 tile" *ngFor="let car of cars | priceOrderer:'ASC'">
+    <app-car [carParam]="car" (carInfo)="recupInfo($event)"></app-car>
+  </div>
+</div>
