@@ -11,6 +11,7 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CreateCarComponent } from './components/create-car/create-car.component';
 import { PriceOrdererPipe } from './pipes/price-orderer.pipe';
+import { CarUpdateComponent } from './components/car-update/car-update.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PriceOrdererPipe } from './pipes/price-orderer.pipe';
     CarComponent,
     CarDetailComponent,
     CreateCarComponent,
-    PriceOrdererPipe
+    PriceOrdererPipe,
+    CarUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -32,8 +32,6 @@ export class CarsComponent implements OnInit {
     this.carInfo = carInfo;
   }
 
-  delete(carDelete: Car){
-    this.carService.delete(carDelete.id);
-  }
+
 
 }

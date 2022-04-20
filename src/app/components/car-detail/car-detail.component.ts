@@ -3,7 +3,7 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angula
 import {Car} from "../../models/car";
 
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { Location } from '@angular/common';
 import {CarServiceService} from "../../services/car-service.service";
 
@@ -22,7 +22,8 @@ export class CarDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private carService: CarServiceService,
-              private location: Location) { }
+              private location: Location,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.getCar();
@@ -41,6 +42,10 @@ export class CarDetailComponent implements OnInit {
 
   selectCar() {
     this.selectCarEvent.emit(this.car);
+  }
+  delete(){
+    this.carService.delete(this.car.id);
+    this.router.navigate(['/cars'])
   }
 
 

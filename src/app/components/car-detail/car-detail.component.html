@@ -103,9 +103,12 @@
       </span>
     </p>
 
+  <div>
+    <button class="btn btn-primary" style="margin: 20px" (click)="goBack()">retour</button>
+    <button class="btn btn-primary" (click)="delete()">Delete</button>
+    <a href="/update/{{car.id}}" class="btn btn-primary" style="margin: 20px" >modifier</a>
 
-    <a href="#" class="btn btn-primary" (click)="selectCar()">Selectionner</a>
-    <p class="btn btn-primary" (click)="goBack()">go back</p>
+  </div>
   </div>
 
 </div>

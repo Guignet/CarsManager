@@ -20,8 +20,6 @@ export class CarComponent implements OnInit {
   sendInfo(){
     this.carInfo.emit(this.car);
   }
-  delete(){
-    this.carDelete.emit(this.car);
-  }
+
 
 }
