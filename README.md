@@ -11,4 +11,13 @@ On a une barre de navigation qui permet de passer d'un onglet a un autre.
 Chaque voiture est affiché dans une carte dans laquelle certaines informations sont affichées.
 
 On peut cliquer sur ***Details*** pour afficher le detail d'une annonce .
-On peut cliquer sur ***Delete*** pour supprimer une annonce **[en cours]**
+On peut cliquer sur ***Delete*** pour supprimer une annonce 
+
+## Creation
+
+On peut créer des voitures 
+par contre on ne peut mettre qu'un lien d'image (pour le moment)
+
+## Update
+
+Il y a un formulaire qui s'ouvre pour l'update (en cours)
